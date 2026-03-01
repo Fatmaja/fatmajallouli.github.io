@@ -9,12 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
+      
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             background-color: #0f172a;
             color: #e2e8f0;
         }
+          html {
+    scroll-behavior: smooth;}
 
         .container {
             width: 85%;
@@ -74,9 +77,18 @@
 
     </style>
 </head>
-
+<nav style="position:fixed; top:0; width:100%; background:#0f172a; padding:15px 0; border-bottom:1px solid #334155; z-index:1000;">
+    <div style="width:85%; max-width:1000px; margin:auto; display:flex; justify-content:space-between; align-items:center;">
+        <strong style="color:#38bdf8;">FJ</strong>
+        <div>
+            <a href="#projects" style="margin-right:20px;">Projects</a>
+            <a href="#about" style="margin-right:20px;">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 <body>
-    <div class="container">
+   <div class="container" style="margin-top:100px;">
 
         <h1>Fatma Jallouli</h1>
         <p><strong>Data Analyst | Customer Value Management | Business Analytics</strong></p>
@@ -87,7 +99,7 @@
             within telecom and data-driven environments.
         </p>
 
-        <h2>Featured Projects</h2>
+        <h2 id="projects">Featured Projects</h2>
 
         <div class="project">
             <h3>Sales Forecasting & Incentive Simulation</h3>
@@ -99,13 +111,13 @@
             <p>Built predictive model to identify high-risk customers and support retention strategy.</p>
         </div>
 
-        <h2>About Me</h2>
+        <h2 id="about">About Me</h2>
         <p>
             Business Analytics graduate with experience in telecom CVM and structured data environments.
             Strong blend of technical skills and strategic business thinking.
         </p>
 
-        <h2>Contact</h2>
+        <h2 id="contact">Contact</h2>
         <p>
             📧 fatma.jallouli01@gmail.com <br>
             🔗 <a href="https://www.linkedin.com/in/fatma-jallouli-34266a201/">LinkedIn</a> <br>
@@ -115,5 +127,19 @@
         <a href="#" class="button">Download CV</a>
 
     </div>
+    <script>
+    const text = "I transform complex data into strategic business insights.";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 40);
+        }
+    }
+
+    typeEffect();
+</script>
 </body>
 </html>
